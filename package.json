@@ -1,0 +1,30 @@
+{
+  "name": "goat-control-adapter",
+  "version": "0.9.0",
+  "main": "main.js",
+  "build": {
+    "appId": "com.yourcompany.goatcontrol",
+    "productName": "GOAT Control Adapter",
+    "files": [
+      "**/*"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "icon.ico"
+    },
+    "nsis": {
+      "oneClick": true,
+      "perMachine": true,
+      "allowElevation": true,
+      "runAfterFinish": true,
+      "include": "installer.nsh"
+    }
+  },
+  "scripts": {
+    "build": "electron-builder"
+  },
+  "devDependencies": {
+    "electron": "^36.2.0",
+    "electron-builder": "^26.0.12"
+  }
+}
